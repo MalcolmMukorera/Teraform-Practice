@@ -1,14 +1,9 @@
 terraform {
-  backend "remote" {
-    organization = "example-organization"
-    workspaces {
-      name = "example-workspace"
-    }
-  }
-}
+  cloud {
+    organization = "Terraform-Project-Pero-Academy"
 
-resource "null_resource" "example" {
-  triggers = {
-    value = "An example resource that does nothing!"
+    workspaces {
+      name = "Terraform-workspace-Pero"
+    }
   }
 }
